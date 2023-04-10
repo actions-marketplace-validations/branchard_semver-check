@@ -1,9 +1,9 @@
 import {info,} from "@actions/core";
 import {readFile} from 'node:fs/promises';
 import axios from 'axios';
-import {FilePath, Infos, ProjectName, Version} from "./types.js";
-import * as version from './version.js'
-import {toFilePath} from "./utils.js";
+import {FilePath, Infos, ProjectName, Version} from "./types";
+import * as version from './version'
+import {toFilePath} from "./utils";
 
 export async function getInfos(): Promise<Infos | Error> {
 	const path = await toFilePath("./package.json");

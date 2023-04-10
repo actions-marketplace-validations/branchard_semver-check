@@ -8,9 +8,9 @@ import {
 	startGroup,
 	endGroup
 } from "@actions/core";
-import * as npm from "./npm.js";
-import * as git from "./git.js";
-import {Infos} from "./types.js";
+import * as npm from "./npm";
+import * as git from "./git";
+import {Infos} from "./types";
 
 const availableSources = ["package.json"] as const;
 const availableDestinations = ["npm", "git"] as const;

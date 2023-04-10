@@ -1,6 +1,6 @@
 import {$} from 'execa';
-import {Alias, Infos, Version} from "./types.js";
-import * as version from "./version.js";
+import {Alias, Infos, Version} from "./types";
+import * as version from "./version";
 
 type GitTag = Alias<string>;
 

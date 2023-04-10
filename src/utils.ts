@@ -1,5 +1,5 @@
 import {stat} from "node:fs/promises";
-import {FilePath} from "./types.js";
+import {FilePath} from "./types";
 
 export async function toFilePath(path: string): Promise<FilePath | Error> {
 	try {

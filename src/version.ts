@@ -1,4 +1,4 @@
-import {Version} from "./types.js";
+import {Version} from "./types";
 import * as semver from "compare-versions";
 
 export function toVersion(input: string): Version | Error {
