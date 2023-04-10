@@ -44,7 +44,7 @@ export async function checkAvailability(sourceInfos: Infos): Promise<boolean | E
 			timeout: 5000,
 		});
 		info(`"${url}" responded HTTP ${response.status}.`);
-		return response.status === 200;
+		return response.status !== 200;
 	} catch (e) {
 		return Error(`https://registry.npmjs.org timeout, the package name "${sourceInfos.name}" maybe not found on npmjs.org`);
 	}
