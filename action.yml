@@ -1,0 +1,25 @@
+name: Semver Check
+author: B. Branchard
+description: Check if version is available on npm.org or github tags
+branding:
+  color: blue
+  icon: check
+
+inputs:
+  source:
+    description: "Where the version to be checked comes from (values: \"package.json\")"
+    required: false
+    default: "package.json"
+
+  destination:
+    description: "Where should the source be compared (values: \"npm\", \"git\")"
+    required: false
+    default: "npm"
+
+outputs:
+  available:
+    description: "Whether the version from the source is available in the destination"
+
+runs:
+  using: node16
+  main: dist/index.js
